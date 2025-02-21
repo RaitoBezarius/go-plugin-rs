@@ -8,7 +8,7 @@ fn main() -> Result<()> {
         .include_file("mod.rs")
         .type_attribute(".", "#[derive(serde::Deserialize)]")
         .type_attribute(".", "#[derive(serde::Serialize)]")
-        .compile(&["proto/kv.proto"], &["proto"])
+        .compile_protos(&["proto/kv.proto"], &["proto"])
         .unwrap();
 
     Ok(())
